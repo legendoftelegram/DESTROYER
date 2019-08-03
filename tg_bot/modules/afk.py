@@ -22,7 +22,7 @@ def afk(bot: Bot, update: Update):
         reason = ""
 
     sql.set_afk(update.effective_user.id, reason)
-    update.effective_message.reply_text("{} ഇപ്പോൾ കീബോർഡിൽ നിന്നും അകലെ ആണ് ! ".format(update.effective_user.first_name))
+    update.effective_message.reply_text("{} now away from the keyboard ! ".format(update.effective_user.first_name))
 
 
 @run_async
@@ -34,7 +34,7 @@ def no_longer_afk(bot: Bot, update: Update):
 
     res = sql.rm_afk(user.id)
     if res:
-        update.effective_message.reply_text("{} ഇപ്പോൾ കീബോർഡിൽ നിന്നും അകലെ അല്ല !".format(update.effective_user.first_name))
+        update.effective_message.reply_text("{} Not far from the keyboard now !".format(update.effective_user.first_name))
 
 
 @run_async
@@ -61,9 +61,9 @@ def reply_afk(bot: Bot, update: Update):
             if sql.is_afk(user_id):
                 user = sql.check_afk_status(user_id)
                 if not user.reason:
-                    res = "{} ഇപ്പോൾ കീബോർഡിൽ നിന്നും അകലെ ആണ് ! കാരണം :\n{} ".format(fst_name)
+                    res = "{} now away from the keyboard ! reason :\n{} ".format(fst_name)
                 else:
-                    res = "{} ഇപ്പോൾ കീബോർഡിൽ നിന്നും അകലെ ആണ് ! കാരണം :\n{}. ".format(fst_name, user.reason)
+                    res = "{} now away from the keyboard ! reason :\n{}. ".format(fst_name, user.reason)
                 message.reply_text(res)
 
 
@@ -74,7 +74,7 @@ __help__ = """
 When marked as AFK, any mentions will be replied to with a message to say you're not available!
 """
 
-__mod_name__ = "കി.നി.അ"
+__mod_name__ = "🖤be🖤right🖤back🖤"
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk)
 AFK_REGEX_HANDLER = DisableAbleRegexHandler("(?i)brb", afk, friendly="afk")
