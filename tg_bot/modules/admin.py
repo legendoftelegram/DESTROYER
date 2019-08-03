@@ -28,7 +28,7 @@ def promote(bot: Bot, update: Update, args: List[str]) -> str:
 
     user_id = extract_user(message, args)
     if not user_id:
-        message.reply_text("നിങ്ങൾ ആരേം സൂചിപ്പിച്ചില്ലലോ.... 🤷🏻‍♂.")
+        message.reply_text("mension one.... 🤷🏻‍♂.")
         return ""
 
     user_member = chat.get_member(user_id)
@@ -53,7 +53,7 @@ def promote(bot: Bot, update: Update, args: List[str]) -> str:
                           can_pin_messages=bot_member.can_pin_messages,
                           can_promote_members=bot_member.can_promote_members)
 
-    message.reply_text("സ്ഥാനക്കയറ്റം കൊടുത്തിട്ടുണ്ട്! 👍🏻")
+    message.reply_text("promoted🧡")
     return "<b>{}:</b>" \
            "\n#PROMOTED" \
            "\n<b>Admin:</b> {}" \
@@ -74,12 +74,12 @@ def demote(bot: Bot, update: Update, args: List[str]) -> str:
 
     user_id = extract_user(message, args)
     if not user_id:
-        message.reply_text("നിങ്ങൾ ആരേം സൂചിപ്പിച്ചില്ലലോ.... 🤷🏻‍♂.")
+        message.reply_text("mension one.... 🤷🏻‍♂.")
         return ""
 
     user_member = chat.get_member(user_id)
     if user_member.status == 'creator':
-        message.reply_text("ഗ്രൂപ്പ് ഉണ്ടാക്കിയ ആളെ ബാൻ ചെയ്യാൻമാത്രം തോമ ചെറ്റയല്ല.... 😬")
+        message.reply_text("i cant ban creator of the group.... 😬")
         return ""
 
     if not user_member.status == 'administrator':
