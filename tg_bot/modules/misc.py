@@ -237,19 +237,19 @@ def info(bot: Bot, update: Update, args: List[str]):
     text += "\nPermanent user link: {}".format(mention_html(user.id, "link"))
 
     if user.id == OWNER_ID:
-        text += "\n\nഈ കള്ള കുരുപ്പ് ആണെന്റെ മൊയലാളി.... ഇവനെ എനിക്ക് ഒന്നും ചെയ്യാൻ പറ്റൂല്ല.... 😔!"
+        text += "\n\nhe is my owner 😔!"
     else:
         if user.id in SUDO_USERS:
-            text += "\nഇയാൾ ഒരു SUDO USER ആണ് 😋" \
-                    "മൊയ്ലാളിന്റെ അത്രേം പവർ ഒക്കെ ഉണ്ട്... അതോണ്ട് സൂക്ഷിച്ചും കണ്ടും ഒക്കെ നിന്നോ.... 😊"
+            text += "\nthis man is a  SUDO USER 😋" \
+                    "I've never considered myself as a legend 🧡- just a simple man with heart.🧡"
         else:
             if user.id in SUPPORT_USERS:
-                text += "\nഇയാൾ ഒരു SUPPORT USER ആണ്.. ! " \
-                        "GBAN ചെയ്യാൻ അല്ലാതെ വേറൊന്നിനും പറ്റൂല്ല... പക്ഷെ അത് മതിയല്ലോ.... അതോണ്ട് ഇവനേം ഒന്ന് സൂക്ഷിച്ചോ.... 😉."
+                text += "\nthis man is a SUPPORT USER .. ! " \
+                        "this man can gban 😉."
 
             if user.id in WHITELIST_USERS:
-                text += "\nഇയാൾ WHITELISTED ആണ്...! " \
-                        "അതോണ്ട് ഇയാളെ എനിക്ക് ban/kick ചെയ്യാൻ പറ്റൂല്ല.... 😔"
+                text += "\nhe is  WHITELISTED ...! " \
+                        "cant ban/kick .... 😔"
 
     for mod in USER_INFO:
         mod_info = mod.__user_info__(user.id).strip()
@@ -392,7 +392,7 @@ __help__ = """
  - /markdownhelp: quick summary of how markdown works in telegram - can only be called in private chats.
 """
 
-__mod_name__ = "മറ്റുള്ളവ"
+__mod_name__ = "❤️others❤️"
 
 ID_HANDLER = DisableAbleCommandHandler("id", get_id, pass_args=True)
 IP_HANDLER = CommandHandler("ip", get_bot_ip, filters=Filters.chat(OWNER_ID))
