@@ -29,9 +29,9 @@ def about_me(bot: Bot, update: Update, args: List[str]):
                                             parse_mode=ParseMode.MARKDOWN)
     elif message.reply_to_message:
         username = message.reply_to_message.from_user.first_name
-        update.effective_message.reply_text(username + " ഇയാളെക്കുറിച്ചുള്ള വിവരം ഇപ്പോൾ ലഭ്യമല്ല !")
+        update.effective_message.reply_text(username + "Information about him is currently unavailable !")
     else:
-        update.effective_message.reply_text("താങ്കളെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഒന്നും ഇതുവരെയും താങ്കൾ ഇതിൽ ചേർത്തിട്ടില്ല !")
+        update.effective_message.reply_text("You have not added any information about yourself yet !")
 
 
 @run_async
@@ -43,10 +43,10 @@ def set_about_me(bot: Bot, update: Update):
     if len(info) == 2:
         if len(info[1]) < MAX_MESSAGE_LENGTH // 4:
             sql.set_user_me_info(user_id, info[1])
-            message.reply_text("താങ്കളുടെ വിവരങ്ങൾ വിജയകരമായി രേഖപ്പെടുത്തിയിരിക്കുന്നു ")
+            message.reply_text("Your information has been recorded successfully")
         else:
             message.reply_text(
-                "താങ്കളെ കുറിച്ചുള്ള വിവരണം {} അക്ഷരങ്ങളിൽ ഒതുക്കേണ്ടതാണ് ".format(MAX_MESSAGE_LENGTH // 4, len(info[1])))
+                " About You{} To be confined to letters ".format(MAX_MESSAGE_LENGTH // 4, len(info[1])))
 
 
 @run_async
@@ -66,9 +66,9 @@ def about_bio(bot: Bot, update: Update, args: List[str]):
                                             parse_mode=ParseMode.MARKDOWN)
     elif message.reply_to_message:
         username = user.first_name
-        update.effective_message.reply_text("{} ഇതുവരെ അദ്ദേഹത്തെക്കുറിച്ചുള്ള വിവരങ്ങൾ ഒന്നും ചേർത്തിട്ടില്ല !".format(username))
+        update.effective_message.reply_text("{} No details about him have been added yet !".format(username))
     else:
-        update.effective_message.reply_text("നിങ്ങളെക്കുറിചുള്ള നിങ്ങളുടെ വിവരങ്ങൾ ഇതുവരെ ചേർത്തിട്ടില്ല !")
+        update.effective_message.reply_text(" Your information about you has been added !")
 
 
 @run_async
@@ -79,10 +79,10 @@ def set_about_bio(bot: Bot, update: Update):
         repl_message = message.reply_to_message
         user_id = repl_message.from_user.id
         if user_id == message.from_user.id:
-            message.reply_text("താങ്കൾ താങ്കളുടെ തന്നെ വിവരങ്ങൾ മാറ്റാൻ നോക്കുന്നോ...?? അത് പറ്റില്ല.")
+            message.reply_text("Are you looking to change your own ... ?? That 's it.")
             return
         elif user_id == bot.id and sender.id not in SUDO_USERS:
-            message.reply_text("എന്റെ വിവരങ്ങൾ മാറ്റാൻ SUDO USERSനു മാത്രമേ സാധിക്കുകയുള്ളു .")
+            message.reply_text(" Only SUDO USERS can change my information.")
             return
 
         text = message.text
@@ -90,13 +90,13 @@ def set_about_bio(bot: Bot, update: Update):
         if len(bio) == 2:
             if len(bio[1]) < MAX_MESSAGE_LENGTH // 4:
                 sql.set_user_bio(user_id, bio[1])
-                message.reply_text("{} യയെ കുറിച്ചുള്ള വിവരം വിജയകരമായി ശേഖരിച്ചിരുന്നു !".format(repl_message.from_user.first_name))
+                message.reply_text("{} Information about the him has been successfully collected !".format(repl_message.from_user.first_name))
             else:
                 message.reply_text(
-                    "നിങ്ങളെക്കുറിച്ചുള്ള വിവരണം {} അക്ഷരത്തിൽ ഒതുക്കേണ്ടതാണ് ! നിങ്ങൾ ഇപ്പോൾ ശ്രമിച്ച അക്ഷരങ്ങളുടെ എണ്ണം  {} ആണ് .".format(
+                    "About you {} Must stick to the letter! The number of characters you have just tried {} hm .".format(
                         MAX_MESSAGE_LENGTH // 4, len(bio[1])))
     else:
-        message.reply_text("ആരുടെയെങ്കിലും MESSAGEന് REPLY ആയി കൊടുത്താൽ മാത്രമേ അദ്ദേഹത്തിന്റെ വിവരങ്ങൾ ചേർക്കാൻ കഴിയുകയുള്ളു ")
+        message.reply_text(" His information can only be added if someone's MESSAGE as a REPLY")
 
 
 def __user_info__(user_id):
@@ -119,7 +119,7 @@ __help__ = """
  - /me: will get your or another user's info
 """
 
-__mod_name__ = "വിവരങ്ങൾ"
+__mod_name__ = "❤️infos❤️"
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
 GET_BIO_HANDLER = DisableAbleCommandHandler("bio", about_bio, pass_args=True)
