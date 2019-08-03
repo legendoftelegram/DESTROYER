@@ -40,7 +40,7 @@ def mute(bot: Bot, update: Update, args: List[str]) -> str:
 
         elif member.can_send_messages is None or member.can_send_messages:
             bot.restrict_chat_member(chat.id, user_id, can_send_messages=False)
-            message.reply_text("👍🏻 ലവന്റെ വായടച്ചിട്ടുണ്ട്! 🤐")
+            message.reply_text("👍🏻 muted! 🤐")
             return "<b>{}:</b>" \
                    "\n#MUTE" \
                    "\n<b>Admin:</b> {}" \
@@ -158,7 +158,7 @@ def temp_mute(bot: Bot, update: Update, args: List[str]) -> str:
     try:
         if member.can_send_messages is None or member.can_send_messages:
             bot.restrict_chat_member(chat.id, user_id, until_date=mutetime, can_send_messages=False)
-            message.reply_text("കുറച്ചുനേരം മിണ്ടാതിരിക്ക്! 😠 Muted for {}!".format(time_val))
+            message.reply_text("shut up! 😠 Muted for {}!".format(time_val))
             return log
         else:
             message.reply_text("This user is already muted.")
@@ -166,7 +166,7 @@ def temp_mute(bot: Bot, update: Update, args: List[str]) -> str:
     except BadRequest as excp:
         if excp.message == "Reply message not found":
             # Do not reply
-            message.reply_text("കുറച്ചുനേരം മിണ്ടാതിരിക്ക്! 😠 Muted for {}!".format(time_val), quote=False)
+            message.reply_text("shut up! 😠 Muted for {}!".format(time_val), quote=False)
             return log
         else:
             LOGGER.warning(update)
@@ -184,7 +184,7 @@ __help__ = """
  - /unmute <userhandle>: unmutes a user. Can also be used as a reply, muting the replied to user.
 """
 
-__mod_name__ = "വായടപ്പിക്കൽ"
+__mod_name__ = "mutes"
 
 MUTE_HANDLER = CommandHandler("mute", mute, pass_args=True, filters=Filters.group)
 UNMUTE_HANDLER = CommandHandler("unmute", unmute, pass_args=True, filters=Filters.group)
