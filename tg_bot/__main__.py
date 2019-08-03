@@ -24,7 +24,7 @@ im a group manager bot maintaint by  [this man](tg://user?id={}).
 
 I was built on python3 using the python-telegram-bot library.... 
 
-I am completely opensource. My Orginal code is available to you [here](https://github.com/anandus0070/Tgbot)..
+I am completely opensource. My Orginal code is available to you [here](https://github.com/anandus0070/devil-eng-bot)..
 hit help for commands /help..
 
 Using standard [Marie](http://telegram.dog/BanhammerMarie_bot) is always gonna be easier.
@@ -35,7 +35,7 @@ Perks:
 - the database will always be correctly formatted
 - bugs will always be fixed ASAP
 - no need to maintain anything yourself
-Also, no support can be given for any [clones like this](https://telegram.dog/MissAnn_Bot); source might be changed and that's not [my](https://telegram.dog/PaulSonOfLars) problem.
+Also, no support can be given for any [clones like this](https://telegram.dog/MissAnn_Bot); source might be changed and that's not [my](https://github.com/anandus0070/devil-eng-bot) problem.
 **Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
 
 """
