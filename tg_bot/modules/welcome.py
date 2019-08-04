@@ -303,7 +303,7 @@ def set_welcome(bot: Bot, update: Update) -> str:
     msg.reply_text("Welcome message സെറ്റ് ചെയ്‌തിട്ടുണ്ട്‌! 🤩")
 
     return "<b>{}:</b>" \
-           "\n#SET_WELCOME" \
+           "\n#SET_GREETING" \
            "\n<b>Admin:</b> {}" \
            "\nSet the welcome message.".format(html.escape(chat.title),
                                                mention_html(user.id, user.first_name))
@@ -486,7 +486,7 @@ dispatcher.add_handler(NEW_MEM_HANDLER)
 dispatcher.add_handler(LEFT_MEM_HANDLER)
 dispatcher.add_handler(WELC_PREF_HANDLER)
 dispatcher.add_handler(GOODBYE_PREF_HANDLER)
-dispatcher.add_handler(SET_WELCOME)
+dispatcher.add_handler(SET_GREETING)
 dispatcher.add_handler(SET_GOODBYE)
 dispatcher.add_handler(RESET_WELCOME)
 dispatcher.add_handler(RESET_GOODBYE)
