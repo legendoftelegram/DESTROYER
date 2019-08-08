@@ -36,7 +36,7 @@ Perks:
 - the database will always be correctly formatted
 - bugs will always be fixed ASAP
 - no need to maintain anything yourself
-Also, no support can be given for any [clones like this](https://telegram.dog/MissAnn_Bot); source might be changed and that's not [code](https://github.com/anandus0070/devil-eng-bot) problem.
+Also, no support can be given for any [clones like this](https://telegram.dog/MissAnn_Bot); source might be changed and that's not my problem [code](https://github.com/anandus0070/devil-eng-bot) .
 **Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
 
 """
