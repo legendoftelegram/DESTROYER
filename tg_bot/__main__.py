@@ -24,7 +24,7 @@ im a group manager bot maintaint by  [this man](tg://user?id={}).
 
 I was built on python3 using the python-telegram-bot library.... 
 
-I am completely opensource. My Orginal code is available to you  [here](https://t.me/anandus)..
+I am completely opensource. My Orginal code is available to you [here](https://t.me/anandus)..
 
 hit help for commands /help..
 
