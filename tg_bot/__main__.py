@@ -20,11 +20,11 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 PM_START_TEXT = """
 hoi {}, my name is {}! if you have any questions about how to use me please give me / help... 
 
-im a group manager bot maintaint by  [this man](tg://user?id={}).
+im a group manager bot maintained by  [this man](tg://user?id={}).
 
 I was built on python3 using the python-telegram-bot library.... 
 
-I am completely opensource. My Orginal code is available to you ..
+I am completely opensource. My Orginal code is available to you ..[here](https://t.me/anandus)
 
 hit help for commands /help..
 
@@ -36,7 +36,7 @@ Perks:
 - the database will always be correctly formatted
 - bugs will always be fixed ASAP
 - no need to maintain anything yourself
-Also, no support can be given for any [clones like this](https://telegram.dog/MissAnn_Bot); source might be changed and that's not [my](https://github.com/anandus0070/devil-eng-bot) problem.
+Also, no support can be given for any [clones like this](https://telegram.dog/MissAnn_Bot); source might be changed and that's not [code](https://github.com/anandus0070/devil-eng-bot) problem.
 **Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
 
 """
