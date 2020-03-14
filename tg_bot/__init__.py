@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 
-import telegram.ext as tg
+import telegram.ext import Updater
 
 # enable logging
 logging.basicConfig(
