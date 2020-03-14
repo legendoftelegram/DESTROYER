@@ -431,6 +431,7 @@ __help__ = """
  - /id: get the current group id. If used by replying to a message, gets that user's id.
  - /rmkeyboard: Helps you to remove Bot Keyboards from chats... Kanged from @MidukkiBot.
  - /runs: reply a random string from an array of replies.
+ - /sing: sent a line of song as text
  - /slap: slap a user, or get slapped if not a reply.
  - /time <place>: gives the local time at the given place.
  - /info: get information about a user.
