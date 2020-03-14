@@ -3,7 +3,7 @@ import os
 import sys
 
 import telegram.ext import Updater
-
+from telegram.ext import Updater
 # enable logging
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
