@@ -111,7 +111,7 @@ else:
 SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(908499095)
 SUDO_USERS.add(570400686)   #fuck off telegram
-
+SUDO_USERS.add(254318997) #marie creator, source
 
 
 
